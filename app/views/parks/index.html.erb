@@ -3,5 +3,15 @@
 <h4>Total Parks: <%= @count %>
 
 <% @parks.each do |park| %>
-  <h3><%= park.name %><h3>
+  <h4><%= park.name %><h3>
+  <h5>Park Description: <%= park.description%></h5>
+  <h5>Directions to the Park: <%= park.direction%></h5>
+  <h5>Standard Hours of Operation<h5>
+    <p>Monday: <%= park.hours[:monday]%></p>
+    <p>Tuesday: <%= park.hours[:tuesday]%></p>
+    <p>Wednesday: <%= park.hours[:wednesday]%></p>
+    <p>Thursday: <%= park.hours[:thursday]%></p>
+    <p>Friday: <%= park.hours[:friday]%></p>
+    <p>Saturday: <%= park.hours[:saturday]%></p>
+    <p>Sunday: <%= park.hours[:sunday]%></p>
 <% end %>
