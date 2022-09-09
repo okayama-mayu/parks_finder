@@ -1,8 +1,8 @@
 class ParksController < ApplicationController 
   before_action :assign_state, only: [:index]
   def index 
-    
-
+    @parks = ParkFacade.parks(params[:state])
+    @count = ParkFacade.park_count(params[:state])
   end
 
   private 
